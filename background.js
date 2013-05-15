@@ -7,11 +7,14 @@ function checkForValidUrl(tabId, changeInfo, tab) {
 chrome.tabs.onUpdated.addListener(checkForValidUrl);
 
 // On click - open corresponding hackernotes page in new tab
-chrome.browserAction.onClicked.addListener(function (tab) {
-  path = tab.url.split('//');
-  username = path[1].split('/')[1];
-  repo = path[1].split('/')[2];
-  hackernotesUrl = "http://www.thehackernotes.com/" + username + '/' + repo;
+chrome.pageAction.onClicked.addListener(function (tab) {
+  var path = tab.url.split('//');
+  var username = path[1].split('/')[1];
+  var repo = path[1].split('/')[2];
+  var hackernotesUrl = "http://www.thehackernotes.com/" + username + '/' + repo;
+  if(username === "" || repo === "") {
+    hackernotesUrl = "http://www.thehackernotes.com/"
+  }
   chrome.tabs.create({
     url: hackernotesUrl
   });
