@@ -1,4 +1,4 @@
-## Chrome plugin for [HackerNotes](http://www.thehackernotes.com)
+## Chrome plugin for [HackerNotes](http://hackernotes.org)
 
 This plugin is **READY** to use - [Get the extension](https://chrome.google.com/webstore/detail/hackernotes-plugin/acphikopigkpfbkonnacihkhcefdeagg)
 

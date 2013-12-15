@@ -11,9 +11,9 @@ chrome.pageAction.onClicked.addListener(function (tab) {
   var path = tab.url.split('//');
   var username = path[1].split('/')[1];
   var repo = path[1].split('/')[2];
-  var hackernotesUrl = "http://www.thehackernotes.com/" + username + '/' + repo;
+  var hackernotesUrl = "http://hackernotes.org/" + username + '/' + repo;
   if(username === "" || repo === "") {
-    hackernotesUrl = "http://www.thehackernotes.com/"
+    hackernotesUrl = "http://hackernotes.org/"
   }
   chrome.tabs.create({
     url: hackernotesUrl
