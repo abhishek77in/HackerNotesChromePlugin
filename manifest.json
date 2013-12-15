@@ -1,6 +1,6 @@
 {
   "name": "HackerNotes Plugin",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Open HackerNotes page of a Github Repository.",
   "background": { "scripts": ["background.js"] },
   "page_action" :
